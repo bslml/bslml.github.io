@@ -1,0 +1,232 @@
+// this file is used for report bugs of bugTracker based on jquery
+// script error
+window.onerror = function(msg,url,line,col,error) {
+    setTimeout(function(){
+        var data = {};
+        col = col || (window.event && window.event.errorCharacter) || 0;
+        data.type = 'Script';
+        data.url = window.location.href;
+        data.line = line;
+        data.col = col;
+        if (!!error && !!error.stack){
+            data.msg = 'Script Error: ['+msg+']->['+url+','+line+':'+col+']' + error.stack.toString() + ' Last XHR Response: ' + window._bugTracker_latest_xhr_response + ' Last XHR RequestURL: ' + window._bugTracker_latest_xhr_url;
+        } else if (!!arguments.callee){
+            var ext = [];
+            var f = arguments.callee.caller, c = 3;
+            while (f) {
+               ext.push(f.toString());
+               if (f  === f.caller) {
+                    break;
+               }
+               f = f.caller;
+            }
+            ext = ext.join(",");
+            data.msg = 'Script Error: ['+msg+']->['+url+','+line+':'+col+']' + ext + ' Last XHR Response: ' + window._bugTracker_latest_xhr_response + ' Last XHR RequestURL: ' + window._bugTracker_latest_xhr_url;
+        }
+        if(data.url && data.line && data.col && data.msg) {
+            window.reportBug(data);
+        }
+    }, 10);
+    return true;
+};
+// static resource error
+document.addEventListener('error', function(e) {
+    setTimeout(function(){
+        var data = {};
+        data.type = 'Resource';
+        data.url = window.location.href;
+        data.line = null;
+        data.col = null;
+        data.msg = 'Resource Load Error: Tag: ' + e.target.tagName + ', Request URL: ' + e.target.src;
+        if(!e.target.src.match('default-avator.png')) {
+            window.reportBug(data);
+        }
+    }, 10);
+    return true;
+}, true);
+
+// static resource load
+document.addEventListener('load', function(e) {
+    if(!e.path) {
+        return true;
+    }
+    var srcUrl = e.path[0].getAttribute('src');
+    srcUrl = srcUrl ? srcUrl : '/nourl';
+    var secureDomains = [
+        'www.tracup.com',
+        '//www.pgyer.com',
+        'qiniu-storage.pgyer.com',
+        'static.pgyer.com',
+        'zc.pgyer.com',
+        'isite.baidu.com',
+        'www.google-analytics.com',
+        'eco-api.meiqia.com',
+        'qiniu-storage.pgyer.com',
+        /^\/.*/,
+        'qnssl.com',
+        '//up.qbox.me',
+        'Reference.of.Image'
+    ];
+    var reportFlag = true;
+    for(var i in secureDomains) {
+        if(srcUrl.match(secureDomains[i])) {
+            reportFlag = false;
+            break;
+        }
+    }
+
+    if(reportFlag) {
+        setTimeout(function() {
+            var data = {};
+            data.type = 'Resource';
+            data.url = window.location.href;
+            data.line = null;
+            data.col = null;
+            data.msg = 'Resource Cross Origin: Tag: ' + e.path[0].tagName + ', Request URL: ' + e.path[0].src;
+            if(e.path[0].tagName.toLowerCase() != 'img') {
+                window.reportBug(data);
+            }
+        }, 10);
+    }
+    return true;
+}, true);
+// xhr request error
+!(function(){
+    // add request url property
+    window.XMLHttpRequest.prototype._bugTracker_openTime = 0;
+    window.XMLHttpRequest.prototype._bugTracker_sendTime = 0;
+    window.XMLHttpRequest.prototype._bugTracker_responseTime = 0;
+    window.XMLHttpRequest.prototype._bugTracker_loadTime = 0;
+    window.XMLHttpRequest.prototype._bugTracker_finishTime = 0;
+    // add error handler
+    var originXHR = window.XMLHttpRequest;
+    window.XMLHttpRequest = function() {
+        var returnXHR = new originXHR();
+        returnXHR._bugTracker_open = returnXHR.open;
+        returnXHR._bugTracker_send = returnXHR.send;
+        returnXHR.send = function (content) {
+            returnXHR._bugTracker_sendTime = new Date().getTime();
+            returnXHR._bugTracker_send(content);
+        }
+        returnXHR.open = function (method, url, async, user, password) {
+            returnXHR.requestURL = url;
+            returnXHR._bugTracker_openTime = new Date().getTime();
+            returnXHR._bugTracker_onreadystatechange = returnXHR.onreadystatechange;
+            // check cross origin
+            var secureDomains = [
+                '//www.tracup.com',
+                '//www.pgyer.com',
+                'qiniu-storage.pgyer.com',
+                '//*.pgyer.com',
+                '//zc.pgyer.com',
+                'isite.baidu.com',
+                'www.google-analytics.com',
+                'eco-api.meiqia.com',
+                /^\/.*/,
+                'qnssl.com',
+                '//up.qbox.me',
+                'Reference.of.Image'
+            ];
+
+            var reportFlag = true;
+            url = url ? url : '/nourl';
+            for(var i in secureDomains) {
+                if(url.match(secureDomains[i])) {
+                    reportFlag = false;
+                    break;
+                }
+            }
+
+            if(reportFlag) {
+                var data = {};
+                data.type = 'XHR HTTP';
+                data.url = window.location.href;
+                data.line = null;
+                data.col = null;
+                data.msg = 'XHR HTTP Cross Origin: targetURL: ' + url;
+//                window.reportBug(data);
+
+                // 阻止所有跨域访问
+//                return false;
+            }
+
+            returnXHR.onreadystatechange = function() {
+                switch(returnXHR.readyState) {
+                    case 2: {
+                        returnXHR._bugTracker_responseTime = new Date().getTime();
+                        break;
+                    }
+                    case 3: {
+                        returnXHR._bugTracker_loadTime = new Date().getTime();
+                        break;
+                    }
+                    case 4: {
+                        returnXHR._bugTracker_finishTime = new Date().getTime();
+                        break;
+                    }
+                }
+                returnXHR._bugTracker_onreadystatechange && returnXHR._bugTracker_onreadystatechange();
+            }
+            return returnXHR._bugTracker_open(method, url, async, user, password);
+        };
+        returnXHR.addEventListener('load', function(e) {
+            var data = {};
+            if(e.target.status < 500) {
+                return true;
+                if(e.target._bugTracker_finishTime - e.target._bugTracker_openTime > 5000) {
+                    data.type = 'XHR HTTP';
+                    data.url = window.location.href;
+                    data.line = null;
+                    data.col = null;
+                    data.msg = 'XHR HTTP Request Too Slow: Status: ' + e.target.status + ' [' + e.target.statusText + ']' + ', Request URL: ' + e.target.requestURL + ' Timetick: Script-> ' + (e.target._bugTracker_sendTime - e.target._bugTracker_openTime) + ' ms, Sending-> ' + (e.target._bugTracker_responseTime - e.target._bugTracker_sendTime) + ' ms, Loading-> ' + (e.target._bugTracker_finishTime - e.target._bugTracker_responseTime) + ' ms';
+                    if(!e.target.requestURL.match('frontEnd')) {
+                        window.reportBug(data);
+                    }
+                }
+                window._bugTracker_latest_xhr_response = e.target.responseText;
+                window._bugTracker_latest_xhr_url = e.target.requestURL;
+                return true;
+            }
+            data.type = 'XHR HTTP';
+            data.url = window.location.href;
+            data.line = null;
+            data.col = null;
+            data.msg = 'XHR HTTP Abnormal: Status: ' + e.target.status + ' [' + e.target.statusText + ']' + ', Request URL: ' + e.target.requestURL;
+            if(e.target.status != 429) {
+                window.reportBug(data);
+            }
+        });
+        returnXHR.addEventListener('error', function(e) {
+            var data = {};
+            data.type = 'XHR ERROR';
+            data.url = window.location.href;
+            data.line = null;
+            data.col = null;
+            data.msg = 'XHR Error: Status: ' + e.target.status + ' [' + e.target.statusText + ']' + ', Request URL: ' + e.target.requestURL;
+            if(e.target.status) {
+                window.reportBug(data);
+            }
+        });
+        returnXHR.addEventListener('timeout', function(e) {
+            var data = {};
+            data.type = 'XHR TIMEOUT';
+            data.url = window.location.href;
+            data.line = null;
+            data.col = null;
+            data.msg = 'XHR Timeout: Status: ' + e.target.status + ' [' + e.target.statusText + ']' + ', Request URL: ' + e.target.requestURL + ', Timeout: ' + e.target.timeout;
+            window.reportBug(data);
+        });
+        return returnXHR;
+    }
+})();
+// error reporter http request
+window.reportBug = function(data) {
+    if(data.msg && data.msg.match("/bugReport/frontEnd")) {
+        return true;
+    }
+    data.msg += ', User Agent: ' + navigator.userAgent;
+    var dataString = JSON.stringify(data);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/bugReport/frontEnd', true);
+    xhr.send(dataString);
+}
