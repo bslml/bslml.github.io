@@ -1,8 +1,8 @@
 {
-    "NewVersion": "1.0.2",
-    "HistoryVersion": "1.2.0#1.3.2#1.0.0#1.0.1#1.0.2",
-    "VersionCode": 16,
-    "ApkUrl": "http://update-1252142997.file.myqcloud.com/app_1.0.2.apk",
+    "NewVersion": "1.0.3",
+    "HistoryVersion": "1.2.0#1.3.2#1.0.0#1.0.1#1.0.2#1.0.3",
+    "VersionCode": 17,
+    "ApkUrl": "http://update-1252142997.file.myqcloud.com/app_1.0.3.1.apk",
 	"UpdateLog": "1.新增应用放行功能\n2.新增热点共享功能\n3.修复了流量统计部分显示异常的问题。",
 	"TargetSize": "4.76M",	
     "IsForce": true
