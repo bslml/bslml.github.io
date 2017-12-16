@@ -216,6 +216,7 @@ window.onload = function() {
 		}
 	}
 	else{
+		tip.style.display = 'none';
 		var a = document.getElementById('J_weixin');
 		a.href = "https://bslml.github.io/app.apk";
 		a.download = "app.apk";
