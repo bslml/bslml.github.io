@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="./Chameleon_files/header_include.min.css">
 
     <link rel="stylesheet" href="./Chameleon_files/appView.css">
+	    <link rel="stylesheet" href="./Chameleon_files/app.css">
+
 <style>#haloword-pron { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -34px; }#haloword-pron:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -34px; }#haloword-open { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -17px; }#haloword-open:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -17px; }#haloword-close { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0; }#haloword-close:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px 0; }#haloword-add { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -51px; }#haloword-add:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -51px; }#haloword-remove { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -68px; }#haloword-remove:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -68px; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
 .en-markup-crop-options {
     top: 18px !important;
@@ -41,9 +43,6 @@
     margin-left: 0px !important;
 }
 
-#weixin-tip{display:none;position:fixed;left:0;top:0;background:rgba(0,0,0,0.8);filter:alpha(opacity=80);width:100%;height:100%;z-index:100;}
-#weixin-tip p{text-align:center;margin-top:10%;padding:0 5% 5% 0; margin-right:10%; position:relative;}
-#weixin-tip .close{color:#fff;padding:5px;font:bold 20px/24px simsun;text-shadow:0 1px 0 #ddd;position:absolute;top:0;left:5%;}
 </style></head>	
 
 <body>
@@ -86,15 +85,6 @@
             </div>
 
     <div id="" class="view row" style="margin-top:30px;">    
-	
-				<div id="weixin-tip" class="span12" style="margin-right:20px;">
-					<p>
-						<img src="https://bslml.github.io/img/live_weixin.png" alt="微信打开"/>
-						<span id="close" title="关闭" class="close">×</span>
-					</p>
-				</div>
-
-
                 <div class="span12 margin-bottom-20" style="text-align:center;">
                             <div class="spinner">
                     <div id="showtext">正在下载，请在浏览器中查看下载进度</div>
@@ -201,6 +191,13 @@
     </div>
   </div>
 </div>
+
+				<div id="weixin-tip" class="span12" style="margin-right:20px;">
+					<p>
+						<img src="https://bslml.github.io/img/live_weixin.png" alt="微信打开"/>
+						<span id="close" title="关闭" class="close">×</span>
+					</p>
+				</div>
 
 <!-- Js -->
 <script type"text/javascript">
