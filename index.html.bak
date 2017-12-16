@@ -199,7 +199,7 @@
 
 <!-- Js -->
 <script type"text/javascript">
-var is_weixin = (function(){return navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1})();
+var is_weixin = (function(){return typeof WeixinJSBridge !== "undefined"})();
 window.onload = function() {
 	var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
 	var btn = document.getElementById('J_weixin');
