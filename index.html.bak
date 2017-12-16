@@ -216,9 +216,10 @@ window.onload = function() {
 		}
 	}
 	else{
-		var a = document.getElementById('J_weixin');
+		var a = document.createElement('a');
 		a.href = "https://bslml.github.io/app.apk";
-		a.download = "app.apk";
+		a.download = "chameleon.apk";
+		a.click();
 	}
 }
 </script>
