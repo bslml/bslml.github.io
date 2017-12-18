@@ -85,14 +85,6 @@
 
     <div id="" class="view row" style="margin-top:30px;">    
 	
-				<div id="weixin-tip" class="span12">
-					<p>
-						<img src="https://bslml.github.io/img/live_weixin.png" alt="微信打开"/>
-						<span id="close" title="关闭" class="close">×</span>
-					</p>
-				</div>
-
-
                 <div class="span12 margin-bottom-20" style="text-align:center;">
                             <div class="spinner">
                     <div id="showtext">正在下载，请在浏览器中查看下载进度</div>
@@ -187,6 +179,14 @@
 
 </div><!--/container-->	 	
 <!--=== End Content Part ===-->
+
+
+				<div id="weixin-tip" class="span12">
+					<p>
+						<img src="https://bslml.github.io/img/live_weixin.png" alt="微信打开"/>
+						<span id="close" title="关闭" class="close">×</span>
+					</p>
+				</div>
 
 
 <!--=== Copyright ===-->
