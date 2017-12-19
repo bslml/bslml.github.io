@@ -1,0 +1,40 @@
+      {
+        "title": "Adaway 去广告源",
+        "location": "https://adaway.org/hosts.txt",
+        "state": 0
+      },
+      {
+        "title": "neoHosts 去广告源 -基础、克制的数据",
+        "location": "https://neko-dev.github.io/neohosts/basic/hosts",
+        "state": 0
+      },
+      {
+        "title": "neoHosts 去广告全量源 -强迫症专用",
+        "location": "https://neko-dev.github.io/neohosts/basic/hosts",
+        "state": 2
+      },
+      {
+        "title": "hpHosts 去广告源",
+        "location": "https://hosts-file.net/ad_servers.txt",
+        "state": 0
+      },
+      {
+        "title": "cedia 长期防病毒源",
+        "location": "https://mirror.cedia.org.ec/malwaredomains/immortal_domains.txt",
+        "state": 2
+      },
+      {
+        "title": "Malware Domain 防病毒源",
+        "location": "https://www.malwaredomainlist.com/hostslist/hosts.txt",
+        "state": 0
+      },
+      {
+        "title": "cedia 综合源",
+        "location": "https://mirror.cedia.org.ec/malwaredomains/justdomains",
+        "state": 2
+      },
+      {
+        "title": "MVPS 综合源",
+        "location": "http://winhelp2002.mvps.org/hosts.txt",
+        "state": 0
+      }
