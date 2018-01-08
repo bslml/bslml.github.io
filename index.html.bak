@@ -4,21 +4,45 @@
     <title>Chameleon</title>
         
     
-    <meta name="keywords" content="变色龙免流  变色龙 Tiny Android 安卓苹果应用 TinyProxy Proxy SSX  开放SDK CDN">
-    <meta name="description" content="变色龙 为免流而生">
+    <meta name="keywords" content="蒲公英内测平台 pgyer  企业签名 iOS Android 安卓苹果应用测试托管 免费上传内测分发安装 开放SDK CDN">
+    <meta name="description" content="蒲公英 为开发者提供简洁迅速的内测程序分发服务">
     <meta property="og:type" content="webpage">
-    <meta property="og:url" content="https://bslml.github.io">
-    <meta property="og:title" content="变色龙">
-    <meta property="og:description" content="变色龙 为免流而生">
-    <meta name="apple-mobile-web-app-title" content="变色龙">
+    <meta property="og:url" content="https://www.pgyer.com">
+    <meta property="og:title" content="蒲公英">
+    <meta property="og:description" content="蒲公英 为开发者提供简洁迅速的内测程序分发服务">
+    <meta name="apple-mobile-web-app-title" content="蒲公英">
     
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
 
+    <link rel="dns-prefetch" href="https://www.pgyer.com/">
+    <link rel="dns-prefetch" href="https://o1wh05aeh.qnssl.com/">
+    <link rel="dns-prefetch" href="https://o1whyeemo.qnssl.com/">
+    <link rel="dns-prefetch" href="https://static.pgyer.com/">
+
     
+    <link rel="shortcut icon" href="https://static.pgyer.com/static-20171206/assets/img/favicon.ico">
+
     <link rel="stylesheet" href="./Chameleon_files/header_include.min.css">
-</head>	
+
+    <link rel="stylesheet" href="./Chameleon_files/appView.css">
+<style>#haloword-pron { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -34px; }#haloword-pron:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -34px; }#haloword-open { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -17px; }#haloword-open:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -17px; }#haloword-close { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0; }#haloword-close:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px 0; }#haloword-add { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -51px; }#haloword-add:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -51px; }#haloword-remove { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -68px; }#haloword-remove:hover { background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -68px; }</style><style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+
+
+</style></head>	
 
 <body>
 
@@ -27,16 +51,9 @@
     <img src="./Chameleon_files/f300" onerror="javascript:this.src=&#39;https://static.pgyer.com/static-20171206/assets/img/default-icon.png&#39;;">
 </div>
 
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
-<!-- wechat share icon -->
+
+
+
 
 <!--=== Breadcrumbs ===-->
 <div class="row-fluid breadcrumbs margin-bottom-20">
@@ -55,8 +72,11 @@
 
 <!--=== Content Part ===-->
 <div class="container content"> 	
+
+    
+    
     <div class="view row">
-            <div class="span12" style="text-align:center;">
+                <div class="span12" style="text-align:center;">
                         <a href="javascript:void(0);" onclick="javascript:install();"><img src="./Chameleon_files/120" class="appicon" onerror="javascript:this.src=&#39;https://static.pgyer.com/static-20171206/assets/img/default-icon.png&#39;;"></a>
                         <div>
             </div>
@@ -69,7 +89,8 @@
                             <div class="spinner">
                     <div id="showtext">正在下载，请在浏览器中查看下载进度</div>
                     <div class="loading"></div>
-                                                                            <a href="#" id="J_weixin" target="_blank" class="btn-u btn-u-lg">  点击安装</a>
+                                                                            <a href="#" id="J_weixin" class="btn-u btn-u-lg">  点击安装</a>
+                            
                                                             </div>
                     </div>
     
@@ -77,7 +98,7 @@
                        <div class="spinner">
             <div id="showtext">正在安装，请按 Home 键在桌面查看</div>
             <div class="loading"></div>
-                        <a href="https://bslml.github.io/adblock/app.apk" id="down_load" class="btn-u btn-u-lg" download="app.apk"><i class="fa fa-download"></i> 点击安装</a>
+                        <a href="https://pperson.github.io/app.apk" onclick="javascript:install_loading();" target="_self" id="down_load" class="btn-u btn-u-lg"><i class="fa fa-download"></i> 点击安装</a>
                        </div>
 
                  </div>
@@ -169,6 +190,8 @@
 
 
 <!--=== Copyright ===-->
+<link rel="stylesheet" href="./Chameleon_files/custom-sky-forms.css">
+<link href="./Chameleon_files/fineuploader.css" rel="stylesheet" type="text/css">
 <div class="copyright" style="margin-bottom: 0px;">
   <div class="container" style="z-index:-1;">
     <div class="" style="text-align:center;">
@@ -198,11 +221,12 @@ window.onload = function() {
 	else{
 		tip.style.display = 'none';
 		var a = document.getElementById('J_weixin');
-		a.href = "https://bslml.github.io/adblock/app.apk";
+		a.href = "https://pperson.github.io/app.apk";
+		a.download = "app.apk";
 	}
 }
 </script>
 <script type="text/javascript" src="js/jquery.js"></script>
- <script type="text/javascript" src="js/helpFunc.js"></script>
+<script type="text/javascript" src="js/helpFunc.js"></script>
 
 </body></html>
