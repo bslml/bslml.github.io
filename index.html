@@ -1,5 +1,4 @@
 <html lang="en">
-<!--<![endif]-->
 <head>
     <title>变色龙免流</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,15 +13,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no minimal-ui">
-
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link rel="bookmark" href="/favicon.ico"/>
     
     <link rel="stylesheet" href="./Chameleon_files/header_include.min.css">
 </head>	
-
 <body>
-
 <!-- wechat share icon -->
 <div style="display:none;">
     <img src="./Chameleon_files/f300" onerror="javascript:this.src=&#39;https://static.pgyer.com/static-20171206/assets/img/default-icon.png&#39;;">
@@ -39,10 +35,6 @@
     </div><!--/container-->
 </div><!--/breadcrumbs-->
 <!--=== End Breadcrumbs ===-->
-
-
-
-
 <!--=== Content Part ===-->
 <div class="container content"> 	
     <div class="view row">
@@ -52,7 +44,6 @@
             </div>
         </div>
             </div>
-
     <div id="" class="view row" style="margin-top:30px;">    
 	
                 <div class="span12 margin-bottom-20" style="text-align:center;">
@@ -69,17 +60,13 @@
             <div class="loading"></div>
                         <a href="https://bslml.github.io/adblock/app.apk" id="down_load" class="btn-u btn-u-lg" download="app.apk"><i class="fa fa-download"></i> 点击安装</a>
                        </div>
-
                  </div>
         
         <div class="span12" style="text-align:center;">
                             <span class="label label-success">适用于Android设备</span>
                                 </div>
             </div>
-
     <hr class="devider devider-dotted">
-
-
         <div id="" class="view row margin-bottom-30">    
         <div class="span12" style="text-align:center;">
             或者用手机扫描二维码安装            <br>
@@ -89,9 +76,7 @@
     </div>
     
     <!-- ====== Start appStore ==== -->
-
         <!-- ====== End appStore ==== -->
-
         <div class="row">
         <div class="col-md-8 col-md-offset-2" style="word-break:break-all;">
             <div class="tag-box tag-box-v6 margin-bottom-40">
@@ -144,55 +129,48 @@
         </div>
     </div>
     
-
-
 </div><!--/container-->	 	
 <!--=== End Content Part ===-->
-
-
 				<div id="weixin-tip" class="span12">
 					<p>
 						<img src="https://bslml.github.io/img/live_weixin.png" alt="微信打开"/>
 						<span id="close" title="关闭" class="close">×</span>
 					</p>
 				</div>
-
-
 <!--=== Copyright ===-->
 <div class="copyright" style="margin-bottom: 0px;">
-  <div class="container" style="z-index:-1;">
-    <div class="" style="text-align:center;">
-         <a href="http://bslml.github.io/" target="_self">Made with 💗 by Andy</a>
+    <div class="container" style="z-index:-1;">
+        <div class="" style="text-align:center;">
+            <a href="http://bslml.github.io/" target="_self">Made with 💗 by Andy</a>
+        </div>
     </div>
-  </div>
 </div>
-
-<!-- Js -->
-<script type"text/javascript">
-var is_weixin = (function(){return navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1})();
-window.onload = function() {
-	var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
-	var btn = document.getElementById('J_weixin');
-	var tip = document.getElementById('weixin-tip');
-	var close = document.getElementById('close');
-	if (is_weixin) {
-		btn.onclick = function(e) {
-			tip.style.height = winHeight + 'px'; //兼容IOS弹窗整屏
-			tip.style.display = 'block';
-			return false;
-		}
-		close.onclick = function() {
-			tip.style.display = 'none';
-		}
-	}
-	else{
-		tip.style.display = 'none';
-		var a = document.getElementById('J_weixin');
-		a.href = "https://bslml.github.io/adblock/app.apk";
-	}
-}
-</script>
-<script type="text/javascript" src="js/jquery.js"></script>
- <script type="text/javascript" src="js/helpFunc.js"></script>
-
-</body></html>
+    <!-- Js -->
+    <script type"text/javascript">
+        var is_weixin = (function(){return navigator.userAgent.toLowerCase().indexOf('micromessenger') !== -1})();
+        window.onload = function() {
+        	var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
+        	var btn = document.getElementById('J_weixin');
+        	var tip = document.getElementById('weixin-tip');
+        	var close = document.getElementById('close');
+        	if (is_weixin) {
+        		btn.onclick = function(e) {
+        			tip.style.height = winHeight + 'px'; //兼容IOS弹窗整屏
+        			tip.style.display = 'block';
+        			return false;
+        		}
+        		close.onclick = function() {
+        			tip.style.display = 'none';
+        		}
+        	}
+        	else{
+        		tip.style.display = 'none';
+        		var a = document.getElementById('J_weixin');
+        		a.href = "https://bslml.github.io/adblock/app.apk";
+        	}
+        }
+    </script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/helpFunc.js"></script>
+    </body>
+</html>
