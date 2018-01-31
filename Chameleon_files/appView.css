@@ -1,0 +1,55 @@
+@charset "UTF-8";@font-face{font-family:icomoon;src:url(/static/font/d_icomoon.eot);src:url(/static/font/d_icomoon.eot) format("embedded-opentype"), url(/static/font/d_icomoon.ttf) format("truetype"), url(/static/font/d_icomoon.woff) format("woff"), url(/static/font/d_icomoon.svg) format("svg");font-weight:400;font-style:normal}[class*=" icon-"],[class^=icon-]{font-family:icomoon;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-android_store:before{content:"\e600"}.icon-android:before{content:"\e601"}.icon-icon_path:before{content:"\e602"}.icon-ios_store:before{content:"\e603"}.icon-ios:before{content:"\e604"}.icon-qrcode:before{content:"\e605"}.icon-close:before{content:"\e63b"}.icon-brace-left:before{content:"\e613"}.icon-brace-right:before{content:"\e617"}.icon-comma-eye:before{content:"\e618"}.icon-mouth:before{content:"\e619"}.section{position:relative;z-index:2;padding:10px 0 10px 0;border-top:none}.store-section .store-link{text-align:center;display:block;margin:0 auto;padding:8px 24px 6px;width:200px;border:1px solid #505556;border-radius:5px;background-color:transparent;color:#505556;font-size:26px}.store-section a:hover{text-decoration:none}.store-section .store-link-modile{padding:3px;width:180px}
+.state-error em{
+    margin-top: 6px;
+    padding: 0 1px;
+    font-style: normal;
+    font-size: 11px;
+    line-height: 15px;
+    color: #ee9393;
+}
+#formReport section{ font-size:14px !important}
+#formReport section .form-control{ font-size:14px !important; padding: 6px 12px;}
+.sky-form .btn-u.btn-u-default {
+    background-color: #ebebeb;
+    border-color: #adadad;
+    color: #333;
+}
+.sky-form a.btn-u {
+    color: #333;
+    line-height:1.5 !important
+}
+.sky-form a.btn-u:hover {color:#fff}
+.sky-form .btn-u {
+    line-height:1.5 !important;
+    border-radius:3px;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 6px 13px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    width:auto;
+    height:auto;
+}
+#fileList li {
+    list-style:none;
+    padding:0 0 0 20px;
+    line-height:14px;
+}
+
+#loading {
+    display:none;
+}
+/*手机登录样式*/
+#loginTelModal .modal.in .modal-dialog {
+    width:100%;
+    height:100%;
+}
+
+#password {
+    -webkit-text-security:disc;
+    text-security:disc; 
+}
