@@ -140,7 +140,7 @@ try {
          $bmobObj->update($firstOrder[0]->objectId, array("serverCount"=>(float)$amount,"tradeID"=>$trade_id,"payTime"=>$pay_time,"result" =>$result_string,"sign" => $sign, "signCalc" => $sign_calc)); 
          if($firstOrder[0]->vipAddLocal === "success")
          {
-         	 //echo "success";
+         	 echo "success";
              return;
          }
          else if($firstOrder[0]->vipAddLocal === "wait")
@@ -156,7 +156,7 @@ try {
               }
               //更新订单信息
               $bmobObj->update($firstOrder[0]->objectId, array("vipAddLocal"=>'success')); 
-              //echo "success";
+              echo "success";
               return;
          }
     }
@@ -180,7 +180,7 @@ try {
         $firstOrder = current((Array)$res);
         //更新订单信息
         $bmobObj->update($firstOrder[0]->objectId, array("vipAddLocal"=>'success')); 
-        //echo "success";
+        echo "success";
     }
   
     // $res=$bmobObj->create(array("playerName"=>"game","score"=>20)); //添加对象
