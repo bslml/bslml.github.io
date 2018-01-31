@@ -150,7 +150,7 @@ try {
               {
                   addVipDays($user_id,366);
               }
-       		  else
+       		  else if($amount > 0)
               {
               	   addVipDays($user_id,31);
               }
@@ -174,7 +174,7 @@ try {
         {
              addVipDays($user_id,366);
         }
-        else if($amount > 4.9)
+        else if($amount > 0)
         {
              addVipDays($user_id,31);
         }

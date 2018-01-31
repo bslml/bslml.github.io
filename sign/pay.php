@@ -150,14 +150,9 @@ try {
               {
                   addVipDays($user_id,366);
               }
-       		  else if($amount > 0)
+       		  else// if($amount > 0)
               {
               	   addVipDays($user_id,31);
-              }
-              else
-              {
-                   echo "success";
-                   return;
               }
               //更新订单信息
               $bmobObj->update($firstOrder[0]->objectId, array("vipAddLocal"=>'success')); 
@@ -174,15 +169,11 @@ try {
         {
              addVipDays($user_id,366);
         }
-        else if($amount > 0)
+        else// if($amount > 0)
         {
              addVipDays($user_id,31);
         }
-      	else
-        {
-        	 echo "success";
-			 return;
-        }
+
       
         //获取刚刚新增的订单新，并更新处理结果
         $res=$bmobObj->get("",array('where='.$condition_str,'limit=2'));
