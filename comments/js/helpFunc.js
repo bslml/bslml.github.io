@@ -17,7 +17,7 @@ $(function(){
 			for(var o in data)
 			{
 				//alert(item);
-				$('#updateExplain').append("<a href=" + 'https://bslapp.me/comments/' + data[o].InnerName + '.html target="_blank">' + data[o].Name + "</a>");
+				$('#updateExplain').append("<a href=" + 'https://bslapp.me/comments/' + data[o].InnerName + '.html?title=' + data[o].Name + 'target="_blank">' + data[o].Name + "</a>");
 				$('#updateExplain').append("\t\t").append(data[o].Description);
 				$('#updateExplain').append("<br />");
 			}
