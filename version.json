@@ -1,9 +1,9 @@
 {
-    "NewVersion": "1.3.1",
-    "HistoryVersion": "1.0.0#1.0.1#1.0.2#1.0.3#1.1.0#1.1.1#1.1.2#1.1.3#1.1.4#1.2.0#1.3.0#1.3.0.1#1.3.1",
-    "VersionCode": 29,
-    "ApkUrl": "https://update-1252142997.file.myqcloud.com/app_1.3.1.3.apk",
-	"UpdateLog": "1.新版自动记住用户邮箱密码。\n2.为方便用户选择模式，改版反馈系统，可以畅所欲言，实时呈现。",
-	"TargetSize": "6.27M",
+    "NewVersion": "1.4.0",
+    "HistoryVersion": "1.0.0#1.0.1#1.0.2#1.0.3#1.1.0#1.1.1#1.1.2#1.1.3#1.1.4#1.2.0#1.3.0#1.3.0.1#1.3.1#1.4.0",
+    "VersionCode": 30,
+    "ApkUrl": "http://update-1252142997.file.myqcloud.com/app140.apk",
+	"UpdateLog": "新增大王卡动态模式",
+	"TargetSize": "6.31M",
     "IsForce": true
 }
