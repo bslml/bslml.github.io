@@ -2,7 +2,7 @@
 
 $(function(){
 	$.ajax({
-		url:'https://iphunter.coding.me/remote.json',
+		url:'https://iphunter.coding.me/remote_mode.json',
 		dataType: 'json',
 		success: function(data){
 			//$('#version').text("版本：" + data.NewVersion + "(build "+data.VersionCode+")");
