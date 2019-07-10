@@ -2,7 +2,7 @@
 
 $(function(){
 	$.ajax({
-		url:'https://pperson.github.io/version.json',
+		url:'https://mode.bslapp.me/version.json',
 		dataType: 'json',
 		success: function(data){
 			$('#version').text("版本：" + data.NewVersion + "(build "+data.VersionCode+")");
