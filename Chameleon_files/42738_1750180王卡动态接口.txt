@@ -1,0 +1,6 @@
+如果提示unll（无法获取动态）更换接口即可
+#王卡配置助手官方接口(http://helper.vtop.design/android_connect/aaa.php)[实时]
+#tinyproxy官方接口(http://token.mgapp.win/token.php?id=2)[实时]
+#kingcardconfig接口(https://520host.gq/kingcardconfig/get_tinyproxy_config.php)[缓存]
+#群友接口(http://cs.xxzml.cn/k/get_tinyproxy_config.php)[缓存]
+#群友接口(https://kingcardconfig.herokuapp.com/kingcardconfig/get_tinyproxy_config.php)[缓存]
