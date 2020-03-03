@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变色龙热点APP下载页面</title>
+    <link rel="stylesheet" href="css/reset.min.css"> 
+    <link rel="stylesheet" href="css/star.css">   
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+            outline: none;
+        }
+        a[title="站长统计"] {
+            display: none;
+        }
+        html, body {
+            font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "AOS Icons", "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, STHeiti, 华文细黑, sans-serif;
+            line-height: 1;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        html {
+            font-size: 16px;
+        } 
+        a {
+            text-decoration: none;
+            color: #fff;
+        }       
+        .container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: left;
+            padding: 50px 0;
+            overflow: hidden;
+        }
+        .c1 {
+            background-image: linear-gradient(1deg, #f35d44, #f35c44 51%, #dd0f3a);
+            color: #fff;
+        }
+        .c2 {
+            background-color: white;
+            color: #666;
+            padding-top: 0;
+        }
+        .content {
+            width: 100%;
+            max-width: 1024px;
+            display: flex;
+            justify-content: center;
+            padding: 0 100px;
+            z-index: 1;
+        }
+        .c2 .content {
+            flex-direction: column;
+        }
+        .iphone_img {
+            max-width: 256px;
+            max-height: 512px;
+        }
+        .right {
+            max-width: 518px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo_img {
+            max-width: 350px;
+            width: 80%;
+            margin-bottom: 46px;
+        }
+
+        .download_content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0 20px;
+        }
+        .download_content .btn {
+            width: 170px;
+            max-width: 170px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            margin: 7.5px 9px;
+            border-radius: 35px;
+            background: rgba(255,255,255,.3);
+            color: #fff;
+            font-size: 0.9375em;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 2px;
+            background-size: cover;
+        }
+
+        .android {
+            background-image: url(img/pc_ad.png);
+        }
+
+        .ios {
+            background-image: url(img/pc_ios.png);
+        }
+
+        .QandA {
+            position: relative;
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .QandA > div{
+            width: 100%;
+            display: flex;
+        }
+        .QandA span {
+            margin-right: 32px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .QandA span:first-of-type {
+            width: 30px;
+            color: #e85151;
+            font-size: 2.25rem;
+        }
+
+        .QandA .btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            color: #E85151;
+            border: 1px solid #F7CDCD;
+            font-size: 0.9375rem;
+            text-align: center;
+            border-radius: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 2.8px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            letter-spacing: 1.2px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: .8rem;
+            letter-spacing: 1.2px;
+            line-height: 1.6;
+        }
+
+        .c2 .main_title { 
+            display: inline-block;
+            position: relative;
+            color: #e85151;
+            border-bottom: 3px solid #D9D9D9;
+            padding-bottom: 15px;
+            z-index: 1;
+        }
+
+        .c2 .main_title:after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            display: block;
+            bottom: -3px;
+            left: 0;
+            border-bottom: 3px solid #e85151;
+        }
+
+        .c2 h2 {
+            font-size: 2.25rem;
+        }
+
+        .c2 h3 {
+            font-size: 1.5rem;
+        }
+
+        .c2 h2 span {
+            color: #666;
+            font-size: 13px;
+            position: absolute;
+            top: 0;
+            left: 160px;
+            line-height: 1.4;
+        }
+
+        .qu {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+        
+        .ans {
+            line-height: 2.13;
+        }
+
+        .line {
+            background-color: #eee;
+            height: 1px;
+        }
+
+        .ground_img {
+            width: 100%;
+            background-color: #f35d44;
+        }
+        footer {
+            width: 100%;
+            height: 200px;
+            background-image: url(img/lulu_footer.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        footer img {
+            width: 168px;
+        }
+        footer .footer {
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding-bottom: 40px;
+            color: #fff;
+            font-weight: 300;
+        }
+        footer p {
+            font-size: 1rem;
+            text-align: left;
+            line-height: 1.5;
+        }
+        .fixed {
+            position: fixed;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,.9);
+            z-index: 100;
+        }
+        .fixed.show {
+            display: flex;
+        }
+        .fixed p {
+            width: 100%;
+            color: #e85151;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .fixed p {
+            width: 100%;
+            color: #e85151;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .fixed div {
+            color: #fff;
+            margin-top: 30px;
+            max-width: 350px;
+            line-height: 1.333;
+        }
+        .incap_page-tooltip{ display:none; }
+        @media (max-width: 992px) {
+            .content {
+                padding: 0 50px;
+            }
+        }
+        @media (max-width: 767px) {
+            html {
+                font-size: 14px;
+            }
+            .iphone_img {
+                display: none;
+            }
+            .right {
+                width: 100%;
+                margin-left: 0;
+            }
+            .img_content > div {
+                margin: 0 10px;
+            }
+            .c2 h2 span {
+                position: initial;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+        @media (max-width: 640px) {
+            .container {
+                padding: 30px 0;
+            }
+            .c2 {
+                padding-bottom: 0;
+            }
+            .content {
+                padding: 0 25px;
+            }
+            .img_content {
+                flex-direction: column;
+                margin-top: 25px;
+            }
+            .img_content > div {
+                margin: 10px 0;
+            }
+            .bank_content img {
+                width: 100%;
+            }
+
+            .bank_content img:first-of-type {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            footer {
+                background-image: url('img/lulu_m_footer.png');
+                background-position: bottom;
+                height: 150px;
+                background-size: contain;
+            }
+            footer .footer {
+                padding-bottom: 10px;
+            }
+            .android {
+                background-image: url(img/m_ad.png);
+            }
+            .ios {
+                position: relative;
+                background-image: url(img/m_ios.png);
+            }
+            .QandA {
+                flex-wrap: wrap;
+            }
+            .QandA span {
+                margin-right: 20px;
+            }
+            .QandA .btn {
+                position: initial;
+                margin-top: 10px;
+                margin-left: 45px;
+            }
+        }
+        @media (max-width: 320px) {
+            html {
+                font-size: 12px;
+            }
+            .content {
+                padding: 0 10px;
+            }
+            .img_content {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container c1">
+        <div class="content">
+            <div class="right">
+                <img class="logo_img" src="img/lutube_logo.png" alt="logo">
+                <h2>变色龙致力于做最好用的免流工具!</h2>
+                <div class="download_content">
+                    <a class="btn pop android1" href="https://bslapp.me/dl/socksdroid.apk"><i class="icon android"></i>Android版</a>
+                    <a class="btn pop ios1" href="https://bslapp.me/dl/sstap.exe"><i class="icon ios"></i>Windows版</a>
+                </div>
+                <p>※热点工具由三方开发，我们仅提供工具下载，不提供任何指导服务！</p>
+            </div>
+        </div>
+        <div class="sky"></div>
+    </div>
+    <img class="ground_img" src="img/lulu_bg.png" alt="ground">
+    <div class="container c2">
+        <div class="content">
+            <h2 class="main_title">热点说明<span>请务必遵守变色龙开热点的顺序：开启变色龙VPN===>手动开启热点/USB共享===>在变色龙侧边菜单点击网络共享===>客户端安装本页面软件进行连接</span></h2>
+            <div class="QandA">
+                <div>
+                    <span>Q</span>
+                    <span>
+                        <p class="qu">Windows版SStap如何使用？</p>
+                        <p class="ans">1.软件下载安装完成</p>
+                        <p class="ans">2.点选「+」即「添加新代理」在弹窗中选中「SOCKS5」</p>
+                        <p class="ans">3.「服务器IP」和「端口」按照变色龙热点页面填写并保存</p>
+                        <p class="ans">4.模式选中「全局」点击「连接」按钮稍等片刻即可</p>
+                    </span>
+                </div>
+                <a href="https://www.wufuba.com" class="btn iosQ" style="display:none;">iOS問題集</a>
+            </div>
+            <div class="line"></div>
+            <div class="QandA">
+                <div>
+                    <span>Q</span>
+                    <span>
+                        <p class="qu">Android版SocksDroid如何使用？</p>
+                        <p class="ans">1.下载SocksDroid并安装</p>
+                        <p class="ans">2.主界面服务器和端口按照变色龙热点页面填写并保存</p>
+						<p class="ans">3.点击Vpn连接按钮进行连接</p>
+                    </span>
+                </div>
+                <a href="https://www.wufuba.com" class="btn androidQ" style="display:none;">安卓問題集</a>
+            </div>
+        </div>
+    </div>  
+    <footer>
+        <div class="footer">
+            <p>© Bslapp. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="fixed">
+        <p>请使用手机安装程式</p>
+        <img src="img/lu_qrcode.png" alt="qrcode">
+        <div>安装提醒：</div>
+        <div>1.Android手机下载前请先至「设定 > 安全性」中将「未知的来源」打勾</div>
+        <div>2.IOS手机下载后请至「设定 > 一般 > 描述档或装置管理」中, 点击信任「企业级APP」</div>
+        <div>3.请勿使用微信的QRcode扫码器</div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/star.js"></script>
+    <script>
+        function mobile() {
+            let webMode = '';
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                return true;
+            }else {
+                return false;
+            }
+        }
+        if(!mobile()) {
+            $('.pop').on('click', function(e) {
+                e.preventDefault();
+                $('.fixed').addClass('show');
+            })
+            $('.fixed').on('click', function(e) {
+                $('.fixed').removeClass('show');
+            })
+        } else {
+            $('.btn').removeClass('pop');
+        }
+
+        $('.btn').on('click', function(e) {
+            $('html, body').animate({
+                scrollTop: $('.c2').offset().top
+            }, 300, function() {
+            });
+        })
+
+    </script>
+</body>
+</html>
