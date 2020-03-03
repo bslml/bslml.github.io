@@ -443,34 +443,5 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/star.js"></script>
-    <script>
-        function mobile() {
-            let webMode = '';
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-                return true;
-            }else {
-                return false;
-            }
-        }
-        if(!mobile()) {
-            $('.pop').on('click', function(e) {
-                e.preventDefault();
-                $('.fixed').addClass('show');
-            })
-            $('.fixed').on('click', function(e) {
-                $('.fixed').removeClass('show');
-            })
-        } else {
-            $('.btn').removeClass('pop');
-        }
-
-        $('.btn').on('click', function(e) {
-            $('html, body').animate({
-                scrollTop: $('.c2').offset().top
-            }, 300, function() {
-            });
-        })
-
-    </script>
 </body>
 </html>
