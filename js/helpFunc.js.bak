@@ -2,7 +2,7 @@
 
 $(function(){
 	$.ajax({
-		url:'https://mode.bslapp.me/version.json',
+		url:'https://api.bslapp.me:39900/mode/version.json',
 		dataType: 'json',
 		success: function(data){
 			$('#version').text("版本：" + data.NewVersion + "(build "+data.VersionCode+")");
